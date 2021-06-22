@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap");
+:root {
+  --clr-white: rgba(255, 255, 255, 1);
+  --clr-black: rgba(0, 0, 0, 1);
+  --nav-blue: rgba(17, 105, 142, 1);
+  --main-blue: rgba(22, 199, 154, 1);
+  --bkgd-ltblue: rgba(248, 241, 241, 1);
+  --last-section-btn: var(--nav-blue);
+  --last-section-btn-active: rgba(0, 72, 181, 0.85);
+  --ff-heading: "Staatliches", sans-serif;
+  --ff-primary: "Kumbh Sans", sans-serif;
+  --ff-section-heading: "Playfair Display", serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: var(--ff-primary);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body {
+  background: var(--bkgd-ltblue);
+  font-size: 100%;
+}
+
+header {
+  padding: 1em 0.85em;
+  background: var(--nav-blue);
+  height: 3em;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+header nav {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+}
+
+header nav .hamburger-menu {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  place-content: center;
+  z-index: 3;
+}
+
+header nav .hamburger-menu .hamburger-image {
+  cursor: pointer;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+header nav h1 {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  left: -4%;
+  width: 100vw;
+  font-family: var(--ff-heading);
+  color: var(--clr-white);
+  z-index: 2;
+}
+
+header nav .menu-options {
+  display: none;
+  position: absolute;
+  background: var(--nav-blue);
+  padding-bottom: 1em;
+  margin-left: -0.875em;
+  top: 1.85em;
+  width: 100vw;
+  place-items: center;
+  -ms-grid-rows: (3.5em)[4];
+      grid-template-rows: repeat(4, 3.5em);
+      grid-template-areas: "home" "pricing" "contact" "learn-more";
+  -webkit-transition: 1s all ease-in;
+  transition: 1s all ease-in;
+}
+
+header nav .menu-options > button {
+  background: var(--bkgd-ltblue);
+  padding: 1em 1.85em;
+  cursor: pointer;
+  border-radius: 1.6em;
+  border: none;
+  font-weight: bold;
+}
+
+header nav .menu-options .home-option {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: home;
+}
+
+header nav .menu-options .pricing-option {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: pricing;
+}
+
+header nav .menu-options .contact-option {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: contact;
+}
+
+header nav .menu-options .learn-btn-option {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: learn-more;
+}
+
+main {
+  background: var(--main-blue);
+  height: 23em;
+  width: 100vw;
+  padding: 1em 1.6em;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  place-content: center;
+  position: relative;
+}
+
+main p {
+  font-style: italic;
+  font-weight: lighter;
+  width: 100%;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+main h2 {
+  font-weight: bold;
+  font-size: 1.8em;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+article {
+  position: relative;
+  padding: 1.4rem;
+}
+
+article section {
+  background: var(--clr-white);
+  padding: 1em;
+  border-radius: 0.85rem;
+  margin: 1rem 0;
+  -webkit-box-shadow: 0 0 4px 1px rgba(80, 80, 80, 0.4);
+          box-shadow: 0 0 4px 1px rgba(80, 80, 80, 0.4);
+}
+
+article section > h3 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 0.7em;
+  font-family: var(--ff-section-heading);
+}
+
+article section > p {
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+}
+
+article section > p:last-child {
+  margin-bottom: 0;
+}
+
+article section:last-child > h3 {
+  margin: 0;
+}
+
+article section:last-child > h3:last-of-type {
+  margin-bottom: 0.7em;
+}
+
+article section:last-child > button {
+  background: var(--last-section-btn);
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 2.7em;
+  margin-top: 1em;
+  border-radius: 0.5em;
+  font-size: 1em;
+  color: var(--clr-white);
+}
+
+article section:last-child > button:active {
+  background: var(--last-section-btn-active);
+}
+/*# sourceMappingURL=styles.css.map */

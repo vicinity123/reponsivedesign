@@ -5,8 +5,8 @@ const menuOptions = document.querySelector('.menu-options')
 console.log(hamburgerSVG)
 
 hamburgerSVG.addEventListener('click', () => {
-    const openMenu = "images/hamburger-menu.svg"
-    const closeMenu = "images/close-menu.svg"
+    const openMenu = "hamburger-menu.svg"
+    const closeMenu = "close-menu.svg"
     const menuOptionStyle = menuOptions.style
     const hamburgerStyle = hamburgerMenuDiv.style
     // menuOptionStyle = "grid"
